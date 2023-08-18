@@ -6,9 +6,12 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+:root{
+    --main-img:url(../imegs/000.jpg);
+}
 /* start header */
 header{
-    background-color: #f0f0f0;
+    background-image: var(--main-img);
     width: 100%;
     position: fixed;
     z-index: 999;
@@ -33,7 +36,7 @@ nav a{
     color:#3a6cf4;
 }
 nav :hover{
-color:#601cfc
+color:#fff
 }
 /* end header */
 /* start main */
@@ -44,7 +47,7 @@ section.main{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(../imegs/kl.jpg) no-repeat;
+    background-image: var(--main-img) ;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -161,7 +164,11 @@ section{
 /* end services */
 /* start projects */
 .projects{
-    background-color: #000016;
+    background-image: var(--main-img);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 .projects content{
     margin-top: 30px;
@@ -230,14 +237,14 @@ background-color:#fff;
 /* end contact */
 /* start footer */
 .footer{
-    background-color:#000016;
-    color: #fff;
+    background-image: var(--main-img);
     padding: 2em;
     display: flex;
     justify-content: space-between;
 }
 .footer-title{
     font-size: 1.1em ;
+    color: white;
 }
 .footer-title a{
     text-decoration: none;
@@ -250,7 +257,7 @@ background-color:#fff;
 @media(max-width:1023px){
     header{
         padding: 10px 30px;
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
     nav a{
         padding-left: 10px;
@@ -271,10 +278,11 @@ background-color:#fff;
         font-size: 1.3em;
     }
     section , section.main{
-        padding: 80px 20px ;
+        padding: 80px 25px ;
+        font-size: 0.8em;
         }
     .title{
-        font-size: 2.7em;
+        font-size: 2.5em;
     }
     .content{
         font-size: 0.9em;
@@ -282,10 +290,18 @@ background-color:#fff;
     .contact{
         font-size: 0.8em;
     }
-    .footer-title{
-        font-size: 0.9em;
+    .footer{
+        padding:1em;
     }
+    .footer-title{
+        font-size: 0.7em;
+        }
     .footer .social-icons {
-        font-size: 1em;
+        font-size: 0.8em;
+        }
+}
+@media (max-width:400px) {
+    header{
+        font-size: 0.6em;
     }
 }
